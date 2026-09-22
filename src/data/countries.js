@@ -9,6 +9,7 @@ export const COUNTRIES = [
     flag: '🇦🇺',
     tagline: 'Favorit untuk jurusan teknik, bisnis, dan IT',
     agent: 'IDP Indonesia',
+    waNumber: '6285709935273',
     tasks: [
       { id: 'ielts', category: 'Bahasa', label: 'Tes IELTS / PTE Academic' },
       { id: 'ijazah', category: 'Dokumen', label: 'Terjemahan & legalisasi ijazah' },
@@ -27,6 +28,7 @@ export const COUNTRIES = [
     flag: '🇬🇧',
     tagline: 'Program S2 satu tahun, kampus tua & bersejarah',
     agent: 'IDP Indonesia',
+    waNumber: '6285709935273',
     tasks: [
       { id: 'ielts', category: 'Bahasa', label: 'Tes IELTS UKVI' },
       { id: 'ijazah', category: 'Dokumen', label: 'Terjemahan & legalisasi ijazah' },
@@ -45,6 +47,7 @@ export const COUNTRIES = [
     flag: '🇩🇪',
     tagline: 'Kuliah nyaris bebas biaya di universitas negeri',
     agent: 'DAAD Information Point',
+    waNumber: '6285709935273',
     tasks: [
       { id: 'testdaf', category: 'Bahasa', label: 'Sertifikat bahasa (TestDaF / Goethe)' },
       { id: 'aps', category: 'Dokumen', label: 'Sertifikat APS (Akademische Prüfstelle)' },
@@ -62,6 +65,7 @@ export const COUNTRIES = [
     flag: '🇯🇵',
     tagline: 'Beasiswa MEXT dan riset teknologi terapan',
     agent: 'Konsuler Pendidikan Jepang',
+    waNumber: '6285709935273',
     tasks: [
       { id: 'jlpt', category: 'Bahasa', label: 'Sertifikat JLPT (opsional, tergantung jurusan)' },
       { id: 'eju', category: 'Akademik', label: 'Tes EJU untuk jenjang S1' },
@@ -78,6 +82,7 @@ export const COUNTRIES = [
     flag: '🇺🇸',
     tagline: 'Ribuan pilihan kampus dan peluang beasiswa riset',
     agent: 'EducationUSA',
+    waNumber: '6285709935273',
     tasks: [
       { id: 'toefl', category: 'Bahasa', label: 'Tes TOEFL iBT / Duolingo English Test' },
       { id: 'sat-gre', category: 'Akademik', label: 'Tes SAT (S1) atau GRE/GMAT (S2)' },

@@ -22,8 +22,14 @@ export function buildMessageText({ name, major, country, agent }) {
   ].join('\n')
 }
 
-export function buildWhatsAppLink(text) {
-  return `https://wa.me/?text=${encodeURIComponent(text)}`
+export function buildWhatsAppLink(text, phoneNumber) {
+  const encoded = encodeURIComponent(text)
+  // Kalau ada nomor tujuan, langsung buka chat ke nomor itu. Kalau tidak
+  // ada (fallback), WhatsApp akan minta pengguna pilih kontak sendiri.
+  if (phoneNumber) {
+    return `https://wa.me/${phoneNumber}?text=${encoded}`
+  }
+  return `https://wa.me/?text=${encoded}`
 }
 
 export function buildEmailLink({ subject, body }) {

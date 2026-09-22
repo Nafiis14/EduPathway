@@ -36,7 +36,7 @@ export default function ContactAgent({ countryId }) {
 
   function handleSend() {
     if (channel === 'whatsapp') {
-      window.open(buildWhatsAppLink(message), '_blank')
+     window.open(buildWhatsAppLink(message, country.waNumber), '_blank')
     } else {
       window.location.href = buildEmailLink({
         subject: `Konsultasi Studi ke ${country.name}`,
