@@ -1,16 +1,56 @@
-# React + Vite
+# EduPathway — Offline Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Panduan interaktif dan checklist lokal untuk membantu calon mahasiswa
+merencanakan studi ke luar negeri. Murni **frontend, tanpa backend** — semua
+data (negara pilihan, progres checklist, profil) tersimpan di `localStorage`
+milik perangkat pengguna, tidak ada request ke server mana pun.
 
-Currently, two official plugins are available:
+## Fitur
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Onboarding** — pilih negara tujuan (Australia, Inggris, Jerman, Jepang,
+  Amerika Serikat) tanpa perlu login.
+- **Dashboard Tracker** — roadmap & checklist dokumen yang di-hardcode per
+  negara, dikelompokkan per kategori (Bahasa, Dokumen, Akademik, Finansial,
+  Visa), dengan lingkaran persentase "siap berangkat".
+- **Kontak Agen** — form Nama & Jurusan yang merakit template pesan
+  WhatsApp/Email secara otomatis, lalu membuka aplikasi WhatsApp/Email
+  bawaan perangkat (link `wa.me` / `mailto:`).
+- **Profil** — Nama, NIM, peran perancang UI/UX, serta rating & review
+  simulasi.
 
-## React Compiler
+## Menjalankan secara lokal
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+Build untuk produksi:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm run build
+npm run preview   # coba hasil build secara lokal
+```
+
+## Catatan teknis
+
+- Routing memakai `react-router-dom` dengan `HashRouter` (bukan
+  `BrowserRouter`) supaya hasil build statis bisa langsung dihosting di
+  mana saja — termasuk GitHub Pages — tanpa perlu konfigurasi rewrite di
+  server untuk client-side routing.
+- Semua ikon dari `lucide-react`, tidak ada aset gambar eksternal sehingga
+  bundle tetap ringan.
+- Progres checklist disimpan terpisah per negara, jadi berpindah negara di
+  "Ganti negara" tidak menghapus progres negara sebelumnya.
+
+## Deploy ke GitHub Pages (opsional)
+
+1. Set `base` di `vite.config.js` sesuai nama repo, contoh:
+   ```js
+   export default defineConfig({
+     base: '/EduPathway/',
+     // ...plugin lain tetap
+   })
+   ```
+2. `npm run build`, lalu deploy isi folder `dist/` ke branch `gh-pages`
+   (bisa pakai package `gh-pages` atau GitHub Actions).
