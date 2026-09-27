@@ -160,6 +160,33 @@
   color: var(--ink-faint);
 }
 
+.campus-block {
+  margin-bottom: 20px;
+}
+
+.campus-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.campus-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line-soft);
+  background: var(--card);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.campus-chip svg {
+  color: var(--gold-strong);
+  flex-shrink: 0;
+}
+
 .checklist-group {
   margin-bottom: 20px;
 }

@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Check, MessageCircleMore } from 'lucide-react'
+import { Check, Landmark, MessageCircleMore } from 'lucide-react'
 import { getCountryById } from '../data/countries.js'
 import { getChecklistState, setTaskDone, clearSelectedCountry } from '../utils/storage.js'
 import ProgressRing from '../components/ProgressRing.jsx'
@@ -61,6 +61,18 @@ export default function Dashboard({ countryId }) {
         <p className="progress-sub">
           {doneCount} dari {taskIds.length} dokumen sudah beres
         </p>
+      </div>
+
+      <div className="campus-block">
+        <p className="checklist-group-title">Contoh Kampus Populer di {country.name}</p>
+        <div className="campus-list">
+          {country.campuses.map((campus) => (
+            <div className="campus-chip" key={campus}>
+              <Landmark size={14} />
+              <span>{campus}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       {groups.map(([category, tasks]) => (

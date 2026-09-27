@@ -10,6 +10,12 @@ export const COUNTRIES = [
     tagline: 'Favorit untuk jurusan teknik, bisnis, dan IT',
     agent: 'IDP Indonesia',
     waNumber: '6285709935273',
+    campuses: [
+      'University of Melbourne',
+      'University of Sydney',
+      'Australian National University',
+      'University of Queensland',
+    ],
     tasks: [
       { id: 'ielts', category: 'Bahasa', label: 'Tes IELTS / PTE Academic' },
       { id: 'ijazah', category: 'Dokumen', label: 'Terjemahan & legalisasi ijazah' },
@@ -29,6 +35,12 @@ export const COUNTRIES = [
     tagline: 'Program S2 satu tahun, kampus tua & bersejarah',
     agent: 'IDP Indonesia',
     waNumber: '6285709935273',
+    campuses: [
+      'University of Oxford',
+      'University of Cambridge',
+      'Imperial College London',
+      'University of Manchester',
+    ],
     tasks: [
       { id: 'ielts', category: 'Bahasa', label: 'Tes IELTS UKVI' },
       { id: 'ijazah', category: 'Dokumen', label: 'Terjemahan & legalisasi ijazah' },
@@ -48,6 +60,12 @@ export const COUNTRIES = [
     tagline: 'Kuliah nyaris bebas biaya di universitas negeri',
     agent: 'DAAD Information Point',
     waNumber: '6285709935273',
+    campuses: [
+      'Technical University of Munich',
+      'RWTH Aachen University',
+      'Heidelberg University',
+      'LMU Munich',
+    ],
     tasks: [
       { id: 'testdaf', category: 'Bahasa', label: 'Sertifikat bahasa (TestDaF / Goethe)' },
       { id: 'aps', category: 'Dokumen', label: 'Sertifikat APS (Akademische Prüfstelle)' },
@@ -66,6 +84,12 @@ export const COUNTRIES = [
     tagline: 'Beasiswa MEXT dan riset teknologi terapan',
     agent: 'Konsuler Pendidikan Jepang',
     waNumber: '6285709935273',
+    campuses: [
+      'University of Tokyo',
+      'Kyoto University',
+      'Osaka University',
+      'Tokyo Institute of Technology',
+    ],
     tasks: [
       { id: 'jlpt', category: 'Bahasa', label: 'Sertifikat JLPT (opsional, tergantung jurusan)' },
       { id: 'eju', category: 'Akademik', label: 'Tes EJU untuk jenjang S1' },
@@ -83,6 +107,12 @@ export const COUNTRIES = [
     tagline: 'Ribuan pilihan kampus dan peluang beasiswa riset',
     agent: 'EducationUSA',
     waNumber: '6285709935273',
+    campuses: [
+      'Harvard University',
+      'Stanford University',
+      'Massachusetts Institute of Technology',
+      'University of California, Berkeley',
+    ],
     tasks: [
       { id: 'toefl', category: 'Bahasa', label: 'Tes TOEFL iBT / Duolingo English Test' },
       { id: 'sat-gre', category: 'Akademik', label: 'Tes SAT (S1) atau GRE/GMAT (S2)' },
